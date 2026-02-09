@@ -1,0 +1,371 @@
+/* =========================
+   SUPERHERO BRIGHT THEME
+   ========================= */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* BODY */
+body {
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    min-height: 100vh;
+    color: #222;
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+.navbar {
+    background: linear-gradient(90deg, #065c87, #065c87);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(11, 239, 255, 0.5);
+}
+
+.navbar .logo {
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+    text-shadow: 0 0 12px rgba(255,255,255,0.8);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    background: rgba(255,255,255,0.25);
+    box-shadow: 0 0 15px rgba(255,255,255,0.9);
+}
+
+/* =========================
+   FORM ASPIRASI
+   ========================= */
+.container {
+    max-width: 500px;
+    margin: 90px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0, 102, 255, 0.25);
+    border: 3px solid #00c6ff;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #214f8c;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+}
+
+.container h5 {
+    text-align: center;
+    color: #a2afc2;
+    font-family: monospace;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* INPUT */
+form input,
+form select,
+form textarea {
+    margin-bottom: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #cce0ff;
+    background: #f9fcff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+form textarea {
+    min-height: 110px;
+    resize: none;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #0066ff;
+    box-shadow: 0 0 12px rgba(0, 200, 255, 0.5);
+}
+
+/* BUTTON */
+form button {
+    margin-top: 10px;
+    padding: 14px;
+    background: linear-gradient(90deg, #932eff, #b96ffa);
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px #6827ff80;
+    transition: 0.3s;
+}
+
+form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px hsla(249, 100%, 64%, 0.7);
+}
+
+/* =========================
+   UMPAN BALIK
+   ========================= */
+.umpanbalik {
+    max-width: 900px;
+    margin: 90px auto;
+    padding: 0 20px;
+}
+
+.umpanbalik h1 {
+    text-align: center;
+    color: #1b3a74;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.umpanbalik .intro {
+    text-align: center;
+    margin: 15px 0 35px;
+    color: #555;
+}
+
+/* FEEDBACK CARD */
+.feedback-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-left: 8px solid #4389b8;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.feedback-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.18);
+}
+
+.feedback-card h3 {
+    color: #0066ff;
+    margin-bottom: 12px;
+}
+
+.feedback-card p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.feedback-card p strong {
+    color: #172c71;
+}
+
+.feedback-card p:last-child {
+    margin-top: 15px;
+    padding: 12px;
+    background: #f1f8ff;
+    border-radius: 8px;
+    color: #0056b3;
+    font-style: italic;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 600px) {
+    .container,
+    .umpanbalik {
+        margin: 60px 15px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+
+/* ALERT */
+.alert {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.alert.error {
+    background: #ffe6e6;
+    color: #b30000;
+    border: 2px solid #ff4d4d;
+}
+
+.alert.success {
+    background: #e6fff1;
+    color: #006633;
+    border: 2px solid #00cc66;
+}
+ 
+/* ================= ADMIN ================= */
+.admin {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.admin h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0066ff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background: linear-gradient(90deg, #0066ff, #00c6ff);
+    color: #fff;
+}
+
+th, td {
+    padding: 12px 14px;
+    text-align: left;
+    font-size: 14px;
+}
+
+tbody tr:nth-child(even) {
+    background: #f4f8ff;
+}
+
+tbody tr:hover {
+    background: #e6f0ff;
+}
+
+/* STATUS */
+.status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status.diproses {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status.selesai {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status.ditolak {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* FORM ACTION */
+.admin form {
+    display: flex;
+    gap: 8px;
+}
+
+.admin select {
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.admin button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #ffcc00, #ff8800);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.admin button:hover {
+    opacity: 0.85;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    table {
+        font-size: 12px;
+    }
+
+    .admin form {
+        flex-direction: column;
+    }
+}
+
+.admin textarea {
+    width: 100%;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    resize: none;
+}
+
+.admin form select {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+}
